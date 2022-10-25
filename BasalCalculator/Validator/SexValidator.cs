@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BasalCalculator.Validator
+﻿namespace BasalCalculator.Validator
 {
     public class SexValidator
     {
-        public char sex { get; set; }
+        public string sex { get; set; }
 
-        public bool ValidarSexo(char sex)
+        public bool ValidarSexo(string sex)
         {
-            if (sex != 'm' &&
-                sex != 'M' &&
-                sex != 'f' &&
-                sex != 'F')
+            if (sex != "m" &&
+                sex != "M" &&
+                sex != "f" &&
+                sex != "F")
             {
                 return false;
             }
@@ -24,25 +17,26 @@ namespace BasalCalculator.Validator
 
         }
 
-        public bool ValidarSexoMasculino(char sex)
+        public bool ValidarSexoMasculino(string sex)
         {
-            if (sex != 'm' &&
-                sex != 'M')
+            if (sex != "m" &&
+                sex != "M")
             {
                 return false;
             }
             else { return true; }
         }
 
-        public bool ValidarSexoFeminino(char sex)
+        public bool ValidarSexoFeminino(string sex)
         {
-            if (sex != 'f' &&
-                sex != 'F')
+            if (sex != "f" &&
+                sex != "F")
             {
                 return false;
             }
             else { return true; }
         }
 
+        
     }
 }
